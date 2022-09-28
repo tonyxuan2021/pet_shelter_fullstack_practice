@@ -22,8 +22,8 @@ export default function SwiperEffect({ newPetList }) {
           disableOnInteraction: false,
         }}
         navigation={true}
-        // modules={[Autoplay, Navigation]}
-        modules={[Navigation]}
+        modules={[Autoplay, Navigation]}
+        // modules={[Navigation]}
         className="mySwiper"
       >
         <div className="pets">

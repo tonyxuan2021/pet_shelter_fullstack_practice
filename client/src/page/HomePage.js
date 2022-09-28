@@ -4,6 +4,7 @@ import axios from "axios";
 import SwiperEffect from "../components/SwiperEffect";
 import FooterNav from "../components/FooterNav";
 import { Typography } from "@mui/material";
+import Header from "../components/Header";
 
 const HomePage = () => {
   const [name, setName] = useState("");
@@ -35,6 +36,7 @@ const HomePage = () => {
 
   return (
     <div className="wrapper">
+      <Header />
       <div className="hero">
         <div className="hero_text">
           <h2>Join Today</h2>

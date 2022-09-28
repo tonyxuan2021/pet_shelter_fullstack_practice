@@ -10,18 +10,18 @@ import { theme } from "../theme/theme";
 
 export default function Header() {
   return (
-    <Box sx={{ flexGrow: 1, p: 2 }}>
+    <Box sx={{ flexGrow: 1, mb: 2 }}>
       <AppBar
         position="static"
         sx={{ background: "transparent", boxShadow: "none" }}
       >
-        <Toolbar sx={{ justifyContent: "space-between" }}>
+        <Toolbar sx={{ justifyContent: "space-between", p: 0 }}>
           <IconButton
             size="large"
             edge="start"
             color="primary"
             aria-label="menu"
-            sx={{ mr: 2 }}
+            // sx={{ mr: 2 }}
           >
             <MenuIcon />
           </IconButton>
