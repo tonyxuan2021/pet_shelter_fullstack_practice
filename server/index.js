@@ -6,6 +6,13 @@ const cors = require("cors");
 
 app.use(cors());
 
+app.get("/api/getpets", (req, res) => {
+  // console.log(req.params.id);
+  knex("pets_3").then((petlist) => {
+    res.status(201).json(petlist);
+  });
+});
+
 app.get("/api/pets/:PetID", (req, res) => {
   // console.log(req.params.id);
   const { PetID } = req.params;
