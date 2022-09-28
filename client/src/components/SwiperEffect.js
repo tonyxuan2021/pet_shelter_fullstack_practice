@@ -36,7 +36,7 @@ export default function SwiperEffect({ newPetList }) {
                     <p>Species: {pet.Species}</p>
                     <p>Age: {pet.Age}</p>
                     <Link to={`/pets/${pet.PetID}`}>
-                      <button className="pet_info_btn">SHOW MORE INFO</button>
+                      <button className="pet_info_btn">About Me</button>
                     </Link>
                   </div>
                   <div className="pet_img_wrapper">

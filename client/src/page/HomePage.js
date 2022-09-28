@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import axios from "axios";
 import SwiperEffect from "../components/SwiperEffect";
+import FooterNav from "../components/FooterNav";
 
 const HomePage = () => {
   const [name, setName] = useState("");
@@ -51,6 +52,7 @@ const HomePage = () => {
         </div>
       </div>
       <SwiperEffect newPetList={newPetList} />
+      <FooterNav />
     </div>
   );
 };
