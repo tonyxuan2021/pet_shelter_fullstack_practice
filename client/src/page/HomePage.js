@@ -3,6 +3,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import axios from "axios";
 import SwiperEffect from "../components/SwiperEffect";
 import FooterNav from "../components/FooterNav";
+import { Typography } from "@mui/material";
 
 const HomePage = () => {
   const [name, setName] = useState("");
@@ -35,7 +36,11 @@ const HomePage = () => {
   return (
     <div className="wrapper">
       <div className="hero">
-        <img src="/human_animal.jpg" className="hero_img" />
+        <div className="hero_text">
+          <h2>Join Today</h2>
+          <h2>And Save Lives</h2>
+          <button className="hero_btn">Donate</button>
+        </div>
       </div>
       <div className="pet_search">
         <h1>Search For a Pet</h1>

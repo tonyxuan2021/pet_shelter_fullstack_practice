@@ -15,7 +15,7 @@ export default function Header() {
         position="static"
         sx={{ background: "transparent", boxShadow: "none" }}
       >
-        <Toolbar>
+        <Toolbar sx={{ justifyContent: "space-between" }}>
           <IconButton
             size="large"
             edge="start"
@@ -25,26 +25,15 @@ export default function Header() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography
-            variant="h6"
-            component="div"
+          <IconButton
+            size="large"
+            aria-label="account of current user"
+            aria-controls="menu-appbar"
+            aria-haspopup="true"
             color="primary"
-            sx={{ flexGrow: 1 }}
           >
-            Photos
-          </Typography>
-
-          <div>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              color="primary"
-            >
-              <AccountCircle />
-            </IconButton>
-          </div>
+            <AccountCircle />
+          </IconButton>
         </Toolbar>
       </AppBar>
     </Box>
