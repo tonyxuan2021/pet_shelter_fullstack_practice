@@ -7,7 +7,8 @@ import { Typography } from "@mui/material";
 import Header from "../components/Header";
 
 const HomePage = () => {
-  const [name, setName] = useState("");
+  // const [name, setName] = useState("");
+  const [searchStr, setSearchStr] = useState("");
   const [newPetList, setNewPetList] = useState([]);
 
   useEffect(() => {
@@ -16,15 +17,18 @@ const HomePage = () => {
       setNewPetList(fetchedData.data);
     };
     fetchData();
-  }, []);
+  }, [searchStr]);
 
   const handleInput = (e) => {
-    setName(e.target.value);
+    setSearchStr(e.target.value);
   };
 
   const handleSearch = () => {
     const newPet = newPetList.filter((pet) => {
-      return pet.Name.toLowerCase().includes(name.toLowerCase());
+      return (
+        pet.Name.toLowerCase().includes(searchStr.toLowerCase()) ||
+        pet.Species.toLowerCase().includes(searchStr.toLowerCase())
+      );
     });
 
     setNewPetList(newPet);
